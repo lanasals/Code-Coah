@@ -3,7 +3,15 @@
   <head>
     <title>Treball Recerca / Lola Sala</title>
   </head>
-  <body>
-    <h1>Hello World</h1>
+<body>
+    <input type="text" id="myText">
+    <button onclick="myFunction()">Click me</button>
+    
+    <script>
+      function myFunction() {
+        var text = document.getElementById("myText").value;
+        alert(text);
+      }
+    </script>
   </body>
 </html>
