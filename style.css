@@ -25,6 +25,8 @@ input[type=text] {
 }
 
 input[type=submit] {
+	font-family: Arial, sans-serif;
+	color: black;
 	background-color: #fc9ffc;
 	padding: 20px;
 	border: none;
