@@ -9,6 +9,7 @@
 input[type="text"] {
   padding: 20px;
   font-size: 20px;
+  font-family: Arial;
   border-radius: 5px;
   border: 2px solid #333; 
   margin-right: 10px;
@@ -19,6 +20,7 @@ input[type="text"] {
 button {
   padding: 20px;
   font-size: 20px;
+   font-family: Arial;
   border-radius: 5px;
   border: none;
   background-color: #d169bc;
@@ -30,6 +32,7 @@ button {
 body {
   display: flex;
   flex-direction: column;
+  font-family: Arial;
   justify-content: center;
   align-items: center;
   height: 200vh;
