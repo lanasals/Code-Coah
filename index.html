@@ -4,12 +4,52 @@
 <head>
 	<title>Code Coach</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script> 
+		function handleCodeSubmission(event) {
+        event.preventDefault(); 
+
+        var code = document.getElementById("codeInput").value; 
+
+       
+        fetch('https://api.openai.com/v1/your_api_endpoint_here', {
+            method: 'POST',
+            headers: {
+                'Authorization': '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',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                prompt: code,
+               {
+  "model": "gpt-3.5-turbo",
+  "messages": [],
+  "temperature": 1,
+  "max_tokens": 107,
+  "top_p": 1,
+  "frequency_penalty": 0,
+  "presence_penalty": 0
+}
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle the API response data
+            // For example, you can display it in an alert box or update a specific HTML element with the result
+            alert(data.choices[0].text); // Display the generated text in an alert box
+        })
+        .catch(error => {
+            // Handle errors if any
+            console.error('Error:', error);
+        });
+    }
+</script>
+
+		
 </head>
 <body>
 	<h1>Code Coach</h1>
 	<form>
-		<input type="text" placeholder="Insert code">
-		<input type="submit" value="Correct">
+    <input type="text" id="codeInput" placeholder="Insert code">
+    <input type="submit" value="Correct" onclick="handleCodeSubmission(event)">
 	</form>
 </body>
 </html>
