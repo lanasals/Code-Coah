@@ -7,11 +7,14 @@
 </head>
 <body>
 	<h1>Code Coach</h1>
+	
 	<form id="codeForm">
 		<input type="text" id="codeInput" placeholder="Insert code">
 		<input type="submit" value="Correct">
 	</form>
+	</br>---------------------</br>
 	<div id="result"></div>
+	<input type="text" id="newResultField" placeholder="Response message">
 
 	<script>
 	$(document).ready(function(){
@@ -20,10 +23,12 @@
 			var code = $('#codeInput').val(); // get the value of the code input field
 
 			$.get('https://victorsala.me/Lola/response.php', { content: code }, function(data) {
-				$('#result').html(data.message); // update the result div with the response message
+				// $('#result').html(data.message); // update the result div with the response message
+				$('#newResultField').val(data.message); // Update the new result field value with the response message
 			});
 		});
 	});
 	</script>
+
 </body>
 </html>
