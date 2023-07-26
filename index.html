@@ -21,7 +21,7 @@
 			e.preventDefault(); // prevent the form from doing a full page refresh
 			var code = $('#codeInput').val(); // get the value of the code input field
 
-			$.get('https://victorsala.me/Lola/response.php', { content: code }, function(data) {
+			$.get('https://victorsala.me/CodeCoachAPI/response.php', { content: code }, function(data) {
 				// $('#result').html(data.message); // update the result div with the response message
 				$('#newResultField').val(data.message); // Update the new result field value with the response message
 			});
