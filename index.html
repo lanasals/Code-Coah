@@ -3,13 +3,27 @@
 <head>
 	<title>Code Coach</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 	<h1>Code Coach</h1>
-	<form>
-		<input type="text" placeholder="Insert code">
+	<form id="codeForm">
+		<input type="text" id="codeInput" placeholder="Insert code">
 		<input type="submit" value="Correct">
 	</form>
+	<div id="result"></div>
+
+	<script>
+	$(document).ready(function(){
+		$('#codeForm').submit(function(e){
+			e.preventDefault(); // prevent the form from doing a full page refresh
+			var code = $('#codeInput').val(); // get the value of the code input field
+
+			$.get('https://victorsala.me/Lola/response.php', { content: code }, function(data) {
+				$('#result').html(data.message); // update the result div with the response message
+			});
+		});
+	});
+	</script>
 </body>
 </html>
-
