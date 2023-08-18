@@ -1,17 +1,46 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Coach</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 <body>
-    <h1>Code Coach</h1>
-
-    <form id="codeForm">
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" class="navbar__logo">
+                <span class="navbar__icon">{]</span> Code Coach
+            </a>
+            <div class="navbar__menu">
+                <ul class="navbar__items">
+                    <li class="navbar__item about">
+                        <a href="AboutProject.html" class="navbar__links">About Project</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="AI.html" class="navbar__links">AI</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="Latest.html" class="navbar__links">Latest</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="Policy.html" class="navbar__links">Policy</a>
+                    </li>
+                </ul>
+                <div class="navbar__btn">
+                    <a href="/" class="button">Search</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <form class="codeForm" id="codeForm">
         <input type="text" id="codeInput" placeholder="Insert code">
+    </br>
         <input type="text" id="newResultField" placeholder="Response message">
+    </br>
         <input type="submit" value="Correct">
     </form>
     
@@ -29,6 +58,5 @@
             });
         });
     </script>
-
 </body>
 </html>
