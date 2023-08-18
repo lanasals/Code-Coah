@@ -1,17 +1,252 @@
-body {
-	display: flex;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+/*applies styles to all elements on the page*/
+
+.navbar{
+    background: #01204D;
+    height: 70px;
+    display: flex;
+    justify-content: center; /*center content horizontally*/
+    align-items: center; /*center content vertitally*/
+    font-size: 1.2rem;
+    position: sticky; /*stays at top while scrolling*/
+    top: 0;
+    z-index: 999;
+}
+/*applies styles to navigation bar*/
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px; 
+}
+/*applies styles to content of navigation bar*/
+
+
+
+
+
+
+
+
+.navbar__logo {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.navbar__icon {
+    transform: rotate(270deg); 
+    font-size: 2rem; 
+    margin-right: 25px; /*space between icon and logo*/
+
+}
+/*applies styles to icon*/
+
+
+.fa-gem{
+    margin: 0.5rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__items {
+    list-style: none; /*removes bullet points from list*/
+    display: flex;
+    gap: 20px; 
+}
+
+.navbar__item {
+    height: 80px;
+}
+/*individual navigation item*/
+
+.navbar__links {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 25px;  /*space between items*/
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: color 0.3s ease;
+}
+
+
+
+
+.navbar__item.about {
+    height: 80px;
+    margin-bottom: 1px; 
+}
+
+.navbar__item.about .navbar__links {
+    padding: 0 5px; 
+    font-size: 1.2rem; 
+    white-space: nowrap;
+}
+
+
+
+
+
+
+.navbar__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.navbar__links:hover {
+    color: rgb(217, 217, 217);
+}
+
+.button {
+    text-decoration: none;
+    padding: 10px 10px;
+    border: 1px solid white;
+    outline: none;
+    border-radius: 20px; /*rounded effect*/
+    background: #01204D;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+
+.button i {
+    margin-right: 5px; /* Add some spacing between the icon and text */
+}
+
+.button:hover {
+    background: #022C69;
+    transition: background 0.3s ease;
+}
+
+
+
+
+
+
+
+
+/*
+@media screen and (max-width: 960px){
+    .navbar__container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+
+    }
+    .navbar__manu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: #131313;
+
+    }
+    .navber__menu.active{
+        background: #131313;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+
+
+    
+
+    .navber__toggle .bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__item{
+        width: 100%;
+    }
+
+    .navbar__links{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__btn{
+        padding-bottom: 2rem;
+    }
+    
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+        margin-right: 20px;
+    }
+
+    .navber__toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+    }
+}
+
+*/
+
+
+.codeForm{
+    display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	height: 100vh;
-}
-
-h1 {
-	font-family: Arial, sans-serif;
-	font-size: 24px;
-	font-weight: bold;
-	color: black;
-	margin-bottom: 20px;
+    
 }
 
 input[type=text] {
@@ -19,8 +254,9 @@ input[type=text] {
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	box-sizing: border-box;
-	width: 100%;
+	width: 25%;
 	margin-bottom: 20px;
+    
 }
 
 input[type=submit] {
