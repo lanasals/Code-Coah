@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Coach</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="C:\Users\Lola\Downloads\favicon.png.ico"
 </head>
 <body>
     <nav class="navbar">
@@ -15,7 +14,8 @@
             <a href="/" class="navbar__logo">
                 <span class="navbar__icon">{]</span> Code Coach
             </a>
-            <div class="navbar__menu">
+            <!-- Corrected ID for the mobile menu button -->
+            <div id="mobile-menu" class="navbar__menu">
                 <ul class="navbar__items">
                     <li class="navbar__item about">
                         <a href="AboutProject.html" class="navbar__links">About Project</a>
@@ -38,25 +38,37 @@
     </nav>
     <form class="codeForm" id="codeForm">
         <input type="text" id="codeInput" placeholder="Insert code">
-    </br>
+        <br>
         <input type="text" id="newResultField" placeholder="Response message">
-    </br>
+        <br>
         <input type="submit" value="Correct">
     </form>
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="app.js"></script>
     <script>
-        $(document).ready(function(){
-            $('#codeForm').submit(function(e){
-                e.preventDefault(); // prevent the form from doing a full page refresh
-                var code = $('#codeInput').val(); // get the value of the code input field
+        $(document).ready(function() {
+            $('#codeForm').submit(function(e) {
+                e.preventDefault();
+                var code = $('#codeInput').val();
 
                 $.get('https://victorsala.me/CodeCoachAPI/response.php', { content: code }, function(data) {
-                    $('#newResultField').val(data.message); // Update the new result field value with the response message
+                    $('#newResultField').val(data.message);
                 }).fail(function() {
-                    $('#newResultField').val('Error occurred during the request.'); // In case of an error, display an error message
+                    $('#newResultField').val('Error occurred during the request.');
                 });
+            });
+
+            // Corrected menu button selection
+            const menu = document.querySelector('#mobile-menu'); // Corrected ID
+            const menuLinks = document.querySelector('.navbar__menu');
+
+            menu.addEventListener('click', function() {
+                menu.classList.toggle('is-active');
+                menuLinks.classList.toggle('active');
             });
         });
     </script>
 </body>
 </html>
+
