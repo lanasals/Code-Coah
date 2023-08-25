@@ -39,7 +39,7 @@
 
 
 .navbar__logo {
-    color: #fff;
+    color: #f5f5f5;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -151,8 +151,7 @@
 
 
 
-
-/*
+/* Mobile */
 @media screen and (max-width: 960px){
     .navbar__container{
         display: flex;
@@ -162,9 +161,8 @@
         width: 100%;
         max-width: 1300px;
         padding: 0;
-
     }
-    .navbar__manu{
+    .navbar__menu{
         display: grid;
         grid-template-columns: auto;
         margin: 0;
@@ -176,9 +174,8 @@
         height: 50vh;
         z-index: -1;
         background: #131313;
-
     }
-    .navber__menu.active{
+    .navbar__menu.active{
         background: #131313;
         top: 100%;
         opacity: 1;
@@ -186,14 +183,18 @@
         z-index: 99;
         height: 50vh;
         font-size: 1.6rem;
+    }
+
+    #navbar__logo{
+        padding-left: 25px;
+     
+    }
 
 
-    
-
-    .navber__toggle .bar{
+    .navbar__toggle .bar{
         width: 25px;
         height: 3px;
-        margin: 5px;
+        margin: 5px auto;
         transition: all 0.3s ease-in-out;
         background: #fff;
     }
@@ -227,17 +228,39 @@
         width: 80%;
         height: 80px;
         margin: 0;
-        margin-right: 20px;
     }
 
-    .navber__toggle .bar{
+    .navbar__toggle .bar{
         display: block;
         cursor: pointer;
+        color: #fff;
     }
+
+    #mobile-menu.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    
+    #mobile-menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg); 
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg); 
     }
 }
 
-*/
+/* Mobile */
+
+
+
+
+
+
+
+
+
+
+
 
 
 .codeForm{
@@ -256,8 +279,7 @@ input[type=text] {
 	box-sizing: border-box;
 	width: 25%;
 	margin-bottom: 20px;
-    
-}
+}      
 
 input[type=submit] {
 	font-family: Arial, sans-serif;
