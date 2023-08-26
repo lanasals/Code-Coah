@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <title>Code Coach</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link href="https://fonts.cdnfonts.com/css/clear-sans" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" class="navbar__logo">
+                <span class="navbar__icon">{]</span> Code Coach
+            </a>
+            <div id="mobile-menu" class="navbar__menu">
+                <ul class="navbar__items">
+                    <li class="navbar__item about">
+                        <a href="AboutProject.html" class="navbar__links">About Project</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="AI.html" class="navbar__links">AI</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="Latest.html" class="navbar__links">Latest</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="Policy.html" class="navbar__links">Policy</a>
+                    </li>
+                </ul>
+                <div class="navbar__btn">
+                    <a href="/" class="button__search">Search</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <h4>Having trouble?</h4>
+
+    <!-- Correction -->
+    <form id="codeForm" class="boxes">
+        <textarea id="codeInput" class="box__insertcode" placeholder="Insert code"></textarea>
+        <br>
+        <textarea id="newResultField" class="box__response" placeholder="Response message" readonly></textarea>
+        <br>
+        <button type="button" class="button__correct">Correct</button>
+    </form>
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+
+    <!-- Dropdown -->
+    <div class="select-menu">
+        <div class="select-btn">
+            <span class="sBtn-text">I also want CoCo to:</span>
+            <i class="bx bx-chevron-down"></i>
+        </div>
+        <ul class="options">
+            <li class="option">
+                <span class="option-text">Optimize my code</span>
+            </li>
+            <li class="option">
+                <span class="option-text">Write the code's function</span>
+            </li>
+            <li class="option">
+                <span class="option-text">Write feedback</span>
+            </li>
+            <li class="option">
+                <span class="option-text">Provide quality code suggestions</span>
+            </li>
+
+        </ul>
+    </div>
+    <script src="script.js"></script>
+
+
+</body>
+</html>
