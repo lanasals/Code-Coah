@@ -267,37 +267,7 @@ body {
 
 
 
-.codeForm{
-    display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-    
-}
 
-input[type=text] {
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	box-sizing: border-box;
-	width: 25%;
-	margin-bottom: 20px;
-}      
-
-input[type=submit] {
-	font-family: Arial, sans-serif;
-	color: black;
-	background-color: #fc9ffc;
-	padding: 12px;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-}
-
-input[type=submit]:hover {
-	background-color: #ff8fff; 
-}
 
 
 .image__coco {
@@ -347,7 +317,7 @@ h3{
 }
 
 .button__login {
-    background-color: rgba(255, 143, 255, 0.7); /*alfa=transparency*/
+    background-color: rgb(255, 143, 255, 0.7); /*alfa=transparency*/
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -359,6 +329,7 @@ h3{
     top: 73%; /* Vertically center */
     left: 45%;
     transform: translate(-50%, -50%);
+    text-decoration: none;
 }
 
 .button__signup:hover{
@@ -378,8 +349,178 @@ h3{
     top: 73%; /* Vertically center */
     left: 55%;
     transform: translate(-50%, -50%);
+    text-decoration: none;
 }
 
 .button__login:hover{
     background-color: rgb(219, 95, 219)
+}
+
+
+
+
+
+h4{
+    font-size: 2.5rem;
+    color:#fff;
+    font-family: 'Clear Sans', sans-serif;
+    position:fixed;
+    top: 20%; /* Vertically center */
+    left: 18%;
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+}
+
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box__insertcode{
+    width: 550px; 
+    height: 300px; 
+    border: 1px solid #000;
+    margin: 54px; /*spacing between boxes*/
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    background-color: #f8f8f8;
+    flex-direction: column; /*Stack elements vertically*/
+    padding: 12px 20px;
+    resize: none;
+    font-size: 16px;
+    position:fixed;
+    top: 38%; 
+    left: 24%;
+    transform: translate(-50%, -50%);
+}
+
+.box__insertcode::placeholder { /*position of the text*/
+    position: absolute;
+    top: 4%;
+    left: 3%;
+    padding: 0 5px; 
+}
+
+.box__response {
+    width: 550px; 
+    height: 500px; 
+    border: 1px solid #000;
+    margin: 57px; /*spacing between boxes*/
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    background-color: #f8f8f8;
+    flex-direction: column; /* Stack elements vertically */
+    padding: 12px 20px;
+    resize: none;
+    font-size: 16px;
+    position:fixed;
+    top: 49.9%; /* Vertically center */
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.box__response::placeholder { /*position of the text*/
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    padding: 0 5px; 
+}
+
+.box__response input[type="text"] {
+    pointer-events: none; /*disable cursor and typing*/
+}
+
+.button__correct {
+    background-color: rgb(255, 143, 255, 0.7); /*alfa=transparency*/
+    color: #fff;
+    font-family: 'Clear Sans', sans-serif;
+    padding: 11.5px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    position:fixed;
+    top: 70%; /* Vertically center */
+    left: 44.5%;
+    transform: translate(-50%, -50%);
+}
+
+.button__correct:hover {
+    background-color: rgb(219, 95, 219)
+}
+
+
+/* Styling for the select menu */
+.select-menu {
+    width: 300px;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    position:fixed;
+    top: 70%; /* Vertically center */
+    left: 18.8%;
+    transform: translate(-50%, -50%);
+}
+
+/* Styling for the select button */
+.select-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sBtn-text {
+    margin-right: 10px;
+}
+
+/* Styling for the dropdown icon */
+.bx-chevron-down {
+    font-size: 24px;
+}
+
+/* Styling for the options list */
+.options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Styling for each option */
+.option {
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.option:hover {
+    background-color: #f1f1f1;
+}
+
+.option-text {
+    margin: 0;
+}
+
+/* Show options when select button is clicked */
+.select-menu.active .options {
+    display: block;
 }
