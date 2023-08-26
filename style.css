@@ -347,7 +347,7 @@ h3{
 }
 
 .button__login {
-    background-color: rgb(255, 143, 255, 0.7); /*alfa=transparency*/
+    background-color: rgba(255, 143, 255, 0.7); /*alfa=transparency*/
     color: #fff;
     padding: 10px 20px;
     border: none;
