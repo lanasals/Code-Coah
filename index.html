@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Coach</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="faviconrosa.ico">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link href="https://fonts.cdnfonts.com/css/clear-sans" rel="stylesheet">
+                
 </head>
 <body>
+<!--Navbar-->
     <nav class="navbar">
         <div class="navbar__container">
             <a href="/" class="navbar__logo">
                 <span class="navbar__icon">{]</span> Code Coach
             </a>
-            <!-- Corrected ID for the mobile menu button -->
             <div id="mobile-menu" class="navbar__menu">
                 <ul class="navbar__items">
                     <li class="navbar__item about">
@@ -31,19 +32,31 @@
                     </li>
                 </ul>
                 <div class="navbar__btn">
-                    <a href="/" class="button">Search</a>
+                    <a href="/" class="button__search">Search</a>
                 </div>
             </div>
         </div>
     </nav>
-    <form class="codeForm" id="codeForm">
-        <input type="text" id="codeInput" placeholder="Insert code">
-        <br>
-        <input type="text" id="newResultField" placeholder="Response message">
-        <br>
-        <input type="submit" value="Correct">
-    </form>
-    
+
+    <div class="image__container">
+        <img class="image__coco" src="./cocoimage.png.png" alt="cocoImage">
+    </div>
+
+    <h1>WELCOME!</h1>
+    <h2>Made a mistake coding again?<br>No worries, artificially intelligent<br>CoCo is at your service</h2>
+    <h3>Get started now</h3>
+   
+    <button class="button__login">Log in</button>
+    <button class="button__signup">Sign up</button>
+
+
+
+
+
+
+
+
+<!--API-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="app.js"></script>
     <script>
@@ -59,8 +72,7 @@
                 });
             });
 
-            // Corrected menu button selection
-            const menu = document.querySelector('#mobile-menu'); // Corrected ID
+            const menu = document.querySelector('#mobile-menu'); 
             const menuLinks = document.querySelector('.navbar__menu');
 
             menu.addEventListener('click', function() {
