@@ -388,7 +388,7 @@ h4{
     border: 2px solid #ccc;
     border-radius: 5px;
     display: flex;
-    background-color: #f8f8f8;
+    background-color: #232323;
     flex-direction: column; /*Stack elements vertically*/
     padding: 12px 20px;
     resize: none;
@@ -415,7 +415,7 @@ h4{
     border: 2px solid #ccc;
     border-radius: 5px;
     display: flex;
-    background-color: #f8f8f8;
+    background-color: #232323;
     flex-direction: column; /* Stack elements vertically */
     padding: 12px 20px;
     resize: none;
@@ -456,47 +456,48 @@ h4{
     background-color: rgb(219, 95, 219)
 }
 
-
-/* Styling for the select menu */
+/* Dark mode dropdown menu */
 .select-menu {
     width: 300px;
     display: inline-block;
     font-family: Arial, sans-serif;
-    position:fixed;
+    position: fixed;
     top: 70%; /* Vertically center */
     left: 18.8%;
     transform: translate(-50%, -50%);
 }
 
-/* Styling for the select button */
+/* Styling for the select button in dark mode */
 .select-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: #f1f1f1;
-    border: 2px solid #ccc;
+    background-color: #222; /* Dark background color */
+    border: 2px solid #444; /* Dark border color */
     border-radius: 5px;
     cursor: pointer;
 }
 
 .sBtn-text {
     margin-right: 10px;
+    color: #fff; /* White text color */
 }
 
-/* Styling for the dropdown icon */
+/* Styling for the dropdown icon in dark mode */
 .bx-chevron-down {
     font-size: 24px;
+    color: #fff; /* White icon color */
 }
 
-/* Styling for the options list */
+/* Styling for the options list in dark mode */
 .options {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: #333; /* Dark background color */
+    border: 1px solid #555; /* Dark border color */
     border-top: none;
     border-radius: 0 0 5px 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -506,18 +507,19 @@ h4{
     margin: 0;
 }
 
-/* Styling for each option */
+/* Styling for each option in dark mode */
 .option {
     padding: 10px;
     transition: background-color 0.3s ease;
 }
 
 .option:hover {
-    background-color: #f1f1f1;
+    background-color: #666; /* Dark hover background color */
 }
 
 .option-text {
     margin: 0;
+    color: #fff; /* White text color */
 }
 
 /* Show options when select button is clicked */
