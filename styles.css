@@ -417,6 +417,7 @@ h4{
     border-radius: 5px;
     display: flex;
     background-color: #232323;
+    color: #ffff;
     flex-direction: column; /* Stack elements vertically */
     padding: 12px 20px;
     resize: none;
