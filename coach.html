@@ -1,18 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
-    <title>Code Coach</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Page title -->
+    <title>Code Coach - TR by Lola Sala</title>
+    
+    <!-- Stylesheets and Fonts -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="faviconrosa.ico">
     <link href="https://fonts.cdnfonts.com/css/clear-sans" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="faviconrosa.ico">
 </head>
+
 <body>
-    <!-- Navbar -->
+    <!-- Navbar Section -->
     <nav class="navbar">
         <div class="navbar__container">
             <a href="/" class="navbar__logo">
@@ -39,23 +47,20 @@
             </div>
         </div>
     </nav>
-
+    
+    <!-- Main Content -->
     <h4>Having trouble?</h4>
-
-    <!-- Correction -->
-  <form id="codeForm" class="boxes">
-    <textarea id="codeInput" class="box__insertcode" placeholder="Insert code"></textarea>
-    <br>
-    <textarea id="newResultField" class="box__response" placeholder="Response message" readonly></textarea>
-    <br>
-    <button type="submit" class="button__correct">Correct</button> <!-- Add this submit button -->
-</form>
-
-    <!-- JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="app.js"></script>
-
-    <!-- Dropdown -->
+    
+    <!-- Code Correction Form -->
+    <form id="codeForm" class="boxes">
+        <textarea id="codeInput" class="box__insertcode" placeholder="Insert code"></textarea>
+        <br>
+        <textarea id="newResultField" class="box__response" placeholder="Response message" readonly></textarea>
+        <br>
+        <button type="submit" class="button__correct">Correct</button>
+    </form>
+    
+    <!-- Dropdown Section -->
     <div class="select-menu">
         <div class="select-btn">
             <span class="sBtn-text">I also want CoCo to:</span>
@@ -67,18 +72,33 @@
             </li>
             <li class="option">
                 <span class="option-text">Write the code's function</span>
-            </li>
+           	 </li>
             <li class="option">
                 <span class="option-text">Write feedback</span>
             </li>
             <li class="option">
                 <span class="option-text">Provide quality code suggestions</span>
             </li>
-
         </ul>
     </div>
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script>
+        // Default value for CoCoJob
+        let CoCoJob = 1;
+
+        // Menu toggle function
+        const menu = document.querySelector('#mobile-menu');
+        const menuLinks = document.querySelector('.navbar__menu');
+        menu.addEventListener('click', function() {
+            menu.classList.toggle('is-active');
+            menuLinks.classList.toggle('active');
+        });
+    </script>
+    <script src="app.js"></script>
     <script src="dropdown.js"></script>
-
-
 </body>
 </html>
