@@ -11,7 +11,25 @@ document.addEventListener("DOMContentLoaded", function () {
             let selectedOption = option.querySelector(".option-text").innerText;
             sBtn_text.innerText = selectedOption;
             optionMenu.classList.remove("active"); // Close the dropdown
-            console.log(selectedOption);
+
+            switch (selectedOption) {
+                case 'Optimize my code':
+                    CoCoJob = 1;
+                    break;
+                case "Write the code's function":
+                    CoCoJob = 2;
+                    break;
+                case 'Write feedback':
+                    CoCoJob = 3;
+                    break;
+                case 'Provide quality code suggestions':
+                    CoCoJob = 4;
+                    break;
+                default:
+                    CoCoJob = 0;
+            }
+
+            console.log(`Selected option: ${selectedOption}, CoCoJob: ${CoCoJob}`);
         });
     });
 });
